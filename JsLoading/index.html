@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* Base styling */
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+      }
+
+      /* Glass container */
+      .container {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        width: 70%;
+        max-width: 400px;
+        padding: 2rem 3rem;
+        border-radius: 1.5rem;
+        text-align: center;
+
+        /* ✨ Glass effect */
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Text */
+      #text {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+
+      /* Loader bar */
+      #loader {
+        height: 12px;
+        width: 10%;
+        background: linear-gradient(90deg, #00c6ff, #0072ff);
+        border-radius: 1.5rem;
+        transition: width 0.3s ease-in-out;
+        box-shadow: 0 0 20px rgba(0, 114, 255, 0.6);
+      }
+
+      /* Status text */
+      #status {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #a0c4ff;
+      }
+
+      /* Main section (hidden initially) */
+      main {
+        display: none;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="text">Loading...</div>
+      <div id="loader"></div>
+      <div id="status">0%</div>
+    </div>
+
+    <main>
+      <h1 style="transition: all ease-in0.3s;">Welcome to JS</h1>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
