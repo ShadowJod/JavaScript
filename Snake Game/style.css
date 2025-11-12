@@ -5,18 +5,24 @@
 }
 
 :root {
-  --bgColor: rgb(33, 33, 33);
-  --fillColor: rgb(39, 116, 39);
-  --textColor: rgb(225, 223, 223);
+  --bgColor: #1e1e1e;
+  --boardColor: #2a2a2a;
+  --fillColor: #4caf50;
+  --foodColor: #e53935;
+  --textColor: #e0e0e0;
+  --shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  --transition: all 0.3s ease;
   --xs: 1rem;
   --sm: 2rem;
   --m: 5rem;
   --l: 6rem;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 main {
@@ -28,11 +34,11 @@ main section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--bgColor);
+  background: linear-gradient(145deg, #141414, #1e1e1e);
   color: var(--textColor);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: var(--sm);
   gap: 0.7rem;
+  overflow: hidden;
 }
 main section .infos {
   display: flex;
@@ -40,18 +46,109 @@ main section .infos {
 }
 main section .infos .info {
   border: 1px solid rgba(231, 231, 231, 0.4);
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+main section .infos .info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 main section .board {
   flex-grow: 1;
-  border: 1px solid rgba(231, 231, 231, 0.4);
+  border: 2px solid rgba(231, 231, 231, 0.2);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+  background-color: var(--boardColor);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
 }
 main section .block {
-  border: 1px solid rgba(231, 231, 231, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: var(--transition);
 }
 main section .fill {
   background-color: var(--fillColor);
+  box-shadow: var(--shadow);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  animation: pulse 0.8s infinite alternate;
+}
+main section .food {
+  background: radial-gradient(circle, var(--foodColor), #8b0000);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  animation: bounce 0.8s infinite alternate;
+}
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+main .modal .start-game,
+main .modal .game-over {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+main .modal .start-game h3,
+main .modal .game-over h3 {
+  color: var(--textColor);
+  font-size: 6vw;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+main .modal .start-game button,
+main .modal .game-over button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #fff;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+main .modal .start-game button:hover,
+main .modal .game-over button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(76, 175, 80, 0.5);
+}
+main .modal .start-game button:active,
+main .modal .game-over button:active {
+  transform: scale(0.95);
+}
+main .modal .game-over {
+  display: none;
+  background: rgba(255, 0, 0, 0.1);
+}
+main .modal .game-over button {
+  background: linear-gradient(135deg, #e53935, #8b0000);
 }/*# sourceMappingURL=style.css.map */
