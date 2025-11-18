@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #box{
+        width: 20%;
+        text-align: center;
+        background-color: wheat;
+        padding: 1rem;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: bottom;
+            border-radius: 1rem;
+        }
+
+        h2{
+            margin-top: 1rem;
+        }
+
+        h3{
+            margin-top: 0.5rem;
+            color: red;
+        }
+
+        button{
+            padding: 0.5rem 1rem;
+            border: none;
+            outline: none;
+            background-color: rgb(11, 205, 11);
+             margin-top: 1rem;
+             color: white;
+             font-weight: 600;
+
+             &:active{
+                scale: 0.9;
+             }
+        }
+    }
+}

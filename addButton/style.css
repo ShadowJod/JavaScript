@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #box {
+  width: 20%;
+  text-align: center;
+  background-color: wheat;
+  padding: 1rem;
+}
+main #box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+  border-radius: 1rem;
+}
+main #box h2 {
+  margin-top: 1rem;
+}
+main #box h3 {
+  margin-top: 0.5rem;
+  color: red;
+}
+main #box button {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  background-color: rgb(11, 205, 11);
+  margin-top: 1rem;
+  color: white;
+  font-weight: 600;
+}
+main #box button:active {
+  scale: 0.9;
+}/*# sourceMappingURL=style.css.map */
