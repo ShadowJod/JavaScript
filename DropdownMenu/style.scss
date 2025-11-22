@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .faq{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+
+
+        .faq1{
+            margin-top: 1rem;
+            background-color: greenyellow;
+            padding: 0.5rem 4rem;
+            text-align: start;
+            cursor: pointer;
+            user-select: none;
+        }
+        .clopsable1{
+            background-color: rgb(38, 38, 38);
+            color: white;
+            padding: 1rem;
+            display: none;
+        }
+        .clopsable2{
+            background-color: rgb(38, 38, 38);
+            color: white;
+            padding: 1rem;
+            display: none;
+        }
+        .clopsable3{
+            background-color: rgb(38, 38, 38);
+            color: white;
+            padding: 1rem;
+            display: none;
+        }
+        .clopsable4{
+            background-color: rgb(38, 38, 38);
+            color: white;
+            padding: 1rem;
+            display: none;
+        }
+    }
+}

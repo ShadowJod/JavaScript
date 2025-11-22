@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    background-color: #222;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+    button {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-family: Poppins, Arial;
+    user-select: none;
+    position: relative;
+    z-index: 99;
+    outline: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    /* Button Hover Glow */
+    &:hover {
+      box-shadow: 0 0 20px rgba(255, 0, 200, 0.6),
+                  0 0 40px rgba(255, 0, 200, 0.4);
+      transform: translateY(-5px);
+    }
+
+    &:active {
+      background-color: rgba(255, 0, 0, 0.7);
+      scale: 0.9;
+    }
+    }
+
+    .box {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+    }
+}

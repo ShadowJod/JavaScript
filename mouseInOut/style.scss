@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+main {
+    height: 100%;
+    background-color: #222;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+
+    .ele{
+        display: flex;
+        border-bottom: 2px solid white;
+        align-items: center;
+        padding-left: 20px;
+        height: 130px;
+        position: relative;
+
+        img{
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0;
+            transition: left ease 0.7s;
+            mix-blend-mode: difference;
+        }
+    }
+} 

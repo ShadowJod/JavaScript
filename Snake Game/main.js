@@ -7,7 +7,7 @@ const restartbttn = document.querySelector(".restartbttn");
 
 const blockHeight = 50;
 const blockWidth = 50;
-let intervalId = null;
+let intervalId = null; 
 let score = 0;
 let highScore = localStorage.getItem("highScore") || 0;
 let time = "00-00";

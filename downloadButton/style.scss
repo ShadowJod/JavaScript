@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #card {
+    padding: 1rem;
+    border-radius: 1rem;
+    
+    #outer{
+        height: 10px;
+        background-color: #888;
+        margin-top: 1rem;
+        border-radius: 1rem;
+
+        #inner{
+            height: 100%;
+            width: 0%;
+            background-color: white;
+            border-radius: 1rem;
+        }
+    }
+    background-color: green;
+
+    h3{
+        span{
+            color: blue;
+        }
+    }
+
+    #bttm{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h5{
+            font-size: 1.5rem;
+        }
+
+        button{
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            border: none;
+            outline: none;
+            font-weight: 600;
+
+            &:active{
+                scale: 0.9;
+            }
+        }
+    }
+  }
+
+}
